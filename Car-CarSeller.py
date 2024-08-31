@@ -102,13 +102,13 @@ for car in car_list[1:5001]:
     SellerList.append(Seller(row=line))
     
     #I really could not get it to automatically make a list of all the sellers and their inventory and removing duplicate sellers so this part doesnt work correctly     
-    if sellers<1 or not(SellerList[0:sellers-1].__contains__(SellerList[sellers])):
-        SellerList[sellers].Buy(CarObjectList[line])
-        sellers+=1
-    else:
+    #if sellers<1 or not(SellerList[0:sellers-1].__contains__(SellerList[sellers])):
+    SellerList[sellers].Buy(CarObjectList[line])
+    sellers+=1
+    '''else:
         index=[x.name for x in SellerList].index(SellerList[sellers].name)
         SellerList[index].Buy(CarObjectList[line])
-        SellerList.pop()
+        SellerList.pop()'''
     
     
     print(line)
